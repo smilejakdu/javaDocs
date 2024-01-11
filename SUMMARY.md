@@ -1,5 +1,8 @@
 # Table of contents
 
 * [javaDocs](README.md)
-* [더 자바 8](8.md)
-* [이펙티브 자바](undefined.md)
+* [자바 문법](undefined/README.md)
+  * [✅ 함수형 인터페이스 & 람다.](undefined/and-..md)
+  * [✅ 자바에서 제공하는 함수형 인페이스](undefined/undefined.md)
+  * [Page 3](undefined/page-3.md)
+* [이펙티브 자바](undefined-1.md)
