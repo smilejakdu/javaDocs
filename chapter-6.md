@@ -2,13 +2,13 @@
 
 
 
-<figure><img src="../.gitbook/assets/스크린샷 2024-02-11 오후 7.42.14.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/스크린샷 2024-02-11 오후 7.42.14.png" alt=""><figcaption></figcaption></figure>
 
 위와 같은 로직을 stream 을 사용했을때 , 변경이 가능하다.
 
 
 
-<figure><img src="../.gitbook/assets/스크린샷 2024-02-11 오후 7.42.54.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/스크린샷 2024-02-11 오후 7.42.54.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -20,7 +20,7 @@
 
 
 
-<figure><img src="../.gitbook/assets/스크린샷 2024-02-11 오후 8.09.56.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/스크린샷 2024-02-11 오후 8.09.56.png" alt=""><figcaption></figcaption></figure>
 
 ```java
 List<Transaction> transactions = 
@@ -31,13 +31,13 @@ List<Transaction> transactions =
 
 ## 최대값 최소값 구하기
 
-<figure><img src="../.gitbook/assets/스크린샷 2024-02-11 오후 8.16.36.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/스크린샷 2024-02-11 오후 8.16.36.png" alt=""><figcaption></figcaption></figure>
 
 
 
 ## 요약 연산
 
-<figure><img src="../.gitbook/assets/스크린샷 2024-02-11 오후 8.20.46.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/스크린샷 2024-02-11 오후 8.20.46.png" alt=""><figcaption></figcaption></figure>
 
 ```java
 double avgCalories = 
