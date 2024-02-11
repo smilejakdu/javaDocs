@@ -131,3 +131,7 @@ public class ParallelStreamsExample {
 
 
 
+### 순차 스트림을 병렬 스트림으로 변환하기
+
+<figure><img src="../.gitbook/assets/스크린샷 2024-02-11 오후 10.40.09.png" alt=""><figcaption></figcaption></figure>
+
