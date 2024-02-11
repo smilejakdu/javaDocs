@@ -13,4 +13,5 @@
     * [필터링](undefined-2/chapter-5/undefined.md)
     * [Page 1](undefined-2/chapter-5/page-1.md)
     * [Page 4](undefined-2/chapter-5/page-4.md)
-* [CHAPTER 6 스트림으로 데이터 수집](chapter-6.md)
+  * [CHAPTER 6 스트림으로 데이터 수집](undefined-2/chapter-6.md)
+  * [CHAPTER 7 병렬 스트림](undefined-2/chapter-7.md)
