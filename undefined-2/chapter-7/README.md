@@ -133,13 +133,13 @@ public class ParallelStreamsExample {
 
 ### 순차 스트림을 병렬 스트림으로 변환하기
 
-<figure><img src="../.gitbook/assets/스크린샷 2024-02-11 오후 10.40.09.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/스크린샷 2024-02-11 오후 10.40.09.png" alt=""><figcaption></figcaption></figure>
 
 리듀싱 연산을 여러 청크에 병렬로 수행할 수 있습니다.
 
 리듀싱 연산으로 생성된 부분 결과를 다시 리듀싱 연산으로 합쳐서 전체 스트림의 리듀싱 결과를 도출했습니다.
 
-<figure><img src="../.gitbook/assets/스크린샷 2024-02-12 오전 12.05.49.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/스크린샷 2024-02-12 오전 12.05.49.png" alt=""><figcaption></figcaption></figure>
 
 
 
