@@ -27,3 +27,18 @@
 
 
 <figure><img src="../../.gitbook/assets/스크린샷 2024-03-01 오전 12.47.51.png" alt=""><figcaption></figcaption></figure>
+
+## 운영체제와 서버자원
+
+
+
+<figure><img src="../../.gitbook/assets/스크린샷 2024-03-01 오전 9.36.00.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/스크린샷 2024-03-01 오전 9.37.10.png" alt=""><figcaption></figcaption></figure>
+
+
+
+<figure><img src="../../.gitbook/assets/스크린샷 2024-03-01 오전 9.42.08.png" alt=""><figcaption></figcaption></figure>
+
+
+
