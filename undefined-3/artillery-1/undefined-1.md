@@ -85,3 +85,9 @@ artillery run --output report.json high-load-test-config.yaml
 
 입력을 해줍니다.
 
+
+
+<figure><img src="../../.gitbook/assets/스크린샷 2024-03-01 오후 3.04.16.png" alt=""><figcaption></figcaption></figure>
+
+가설은 GC 가 많이 발생해서 생기는건가 ??? 가설을 세울수가 있다.
+

@@ -63,3 +63,41 @@ Artillery로 HTTP 기반의 웹 애플리케이션에 대한 성능 테스트를
 
 
 
+
+
+## Web Socket 테스트 하기
+
+
+
+Artillery는 기본적으로 HTTP 및 HTTPS 요청을 테스트하기 위한 도구입니다. 하지만, Artillery는 WebSocket을 포함한 다양한 프로토콜을 지원하기 때문에 WebSocket 통신을 테스트하는 것도 가능합니다.
+
+WebSocket 테스트를 위해서는 Artillery의 설정 파일을 WebSocket 프로토콜에 맞게 조정해야 합니다. WebSocket 통신을 테스트할 때는 연결을 열고, 메시지를 보내고, 서버로부터 메시지를 받는 것과 같은 작업을 시뮬레이션할 수 있습니다.
+
+다음은 WebSocket 통신을 테스트하기 위한 Artillery 설정 파일의 예시입니다:
+
+```yaml
+config:
+  target: "ws://localhost:8080"  # WebSocket 서버 주소
+  phases:
+    - duration: 60  # 테스트 지속 시간(초)
+      arrivalRate: 10  # 초당 새 사용자 수
+scenarios:
+  - engine: "ws"  # WebSocket 프로토콜 사용
+    flow:
+      - send: "Hello, server!"  # 서버에 보낼 메시지
+      - think: 1  # 다음 동작까지 대기 시간(초)
+      - waitForResponse:  # 서버로부터 메시지를 기다림
+      - send: "Another message"
+      - think: 1
+      - close  # WebSocket 연결 종료
+```
+
+위 설정 파일은 다음과 같은 작업을 시뮬레이션합니다:
+
+1. WebSocket 서버(`ws://localhost:8080`)에 대한 연결을 시도합니다.
+2. 연결이 성공하면, "Hello, server!" 메시지를 서버에 보냅니다.
+3. 잠시 대기한 후(예: 1초), 서버로부터의 응답을 기다립니다.
+4. 추가 메시지("Another message")를 보냅니다.
+5. 다시 잠시 대기한 후 연결을 종료합니다.
+
+WebSocket 테스트의 경우, `engine: "ws"` 설정이 필요하며, `flow` 섹션에서는 연결 설정, 메시지 전송, 응답 대기, 연결 종료 등의 동작을 정의할 수 있습니다. 이러한 설정을 통해 실제 웹 애플리케이션이나 서비스에서의 WebSocket 통신 패턴을 모델링하고 테스트할 수 있습니다.
