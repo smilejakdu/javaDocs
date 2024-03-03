@@ -14,7 +14,7 @@
 
 ## 명령형 프로그래밍 vs 선언형 프로그래밍
 
-<figure><img src="../.gitbook/assets/스크린샷 2024-03-03 오후 7.48.25.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/스크린샷 2024-03-03 오후 7.48.25.png" alt=""><figcaption></figcaption></figure>
 
 Reactive Streams 를 구현한 구현체
 

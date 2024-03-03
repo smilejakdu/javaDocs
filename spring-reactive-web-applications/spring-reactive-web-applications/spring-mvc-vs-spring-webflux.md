@@ -6,7 +6,7 @@
 
 
 
-<figure><img src="../.gitbook/assets/스크린샷 2024-03-03 오후 8.21.40.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/스크린샷 2024-03-03 오후 8.21.40.png" alt=""><figcaption></figcaption></figure>
 
 Spring Boot MVC와 Spring Boot WebFlux는 Spring Framework에서 웹 애플리케이션을 구축하기 위한 두 가지 다른 접근 방식입니다. 각각의 차이점과 장단점을 아래에 설명합니다.
 

@@ -6,7 +6,7 @@
 
 
 
-<figure><img src="../.gitbook/assets/스크린샷 2024-03-03 오후 7.56.33.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/스크린샷 2024-03-03 오후 7.56.33.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -22,13 +22,13 @@
 
 
 
-<figure><img src="../.gitbook/assets/스크린샷 2024-03-03 오후 8.12.12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/스크린샷 2024-03-03 오후 8.12.12.png" alt=""><figcaption></figcaption></figure>
 
 컨텍스트 스위치 할때 비용이 발생하는 이유가 뭘까요 ??
 
 
 
-<figure><img src="../.gitbook/assets/스크린샷 2024-03-03 오후 8.13.49.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/스크린샷 2024-03-03 오후 8.13.49.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -36,13 +36,13 @@
 
 
 
-<figure><img src="../.gitbook/assets/스크린샷 2024-03-03 오후 8.16.55.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/스크린샷 2024-03-03 오후 8.16.55.png" alt=""><figcaption></figcaption></figure>
 
 
 
 ## Non-Blocking I/O 방식
 
-<figure><img src="../.gitbook/assets/스크린샷 2024-03-03 오후 8.18.57.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/스크린샷 2024-03-03 오후 8.18.57.png" alt=""><figcaption></figcaption></figure>
 
 
 
