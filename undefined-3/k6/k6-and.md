@@ -78,13 +78,21 @@ Java Spring Boot 프로젝트에 대한 성능 테스트, 특히 위의 코드 �
     import http from 'k6/http';
     import { sleep, check } from 'k6';
 
+    export let options = {
+        vus: 50, // 동시에 실행될 가상 사용자(VU)의 수
+        duration: '30s', // 테스트 지속 시간
+    };
+
     export default function () {
-      let response = http.get('http://localhost:8080/api/teachers?page=0&size=10'); // 여기서 URL은 실제 서버의 것으로 바꿔야 함
-      check(response, {
-        'is status 200': (r) => r.status === 200,
-      });
-      sleep(1);
+        // 랜덤 페이지 번호 생성, 예를 들어 0에서 99 사이
+        let page = Math.floor(Math.random() * 10);
+        let response = http.get(`http://localhost:13022/api/teacher?page=${page}&size=10`);
+        check(response, {
+            'is status 200': (r) => r.status === 200,
+        });
+        sleep(1); // 각 VU 사이에 휴식 시간 설정
     }
+
     ```
 
     `findOneTeacherById` 엔드포인트에 대해서도 비슷한 스크립트를 작성할 수 있습니다.
@@ -100,4 +108,30 @@ Java Spring Boot 프로젝트에 대한 성능 테스트, 특히 위의 코드 �
 6. **부하 조건 조정**: 필요에 따라 k6 스크립트에서 가상 사용자(VUs)의 수, 테스트 지속 시간 등 부하 조건을 조정하여 다양한 부하 시나리오에서의 애플리케이션 성능을 테스트할 수 있습니다.
 
 이 절차를 따라서 Java Spring Boot 애플리케이션에 대한 성능 테스트를 구성하고 실행할 수 있습니다. 필요에 따라 테스트를 여러 번 반복하여 애플리케이션의 성능을 철저히 이해하고 개선할 수 있습니다.
+
+
+
+
+
+<figure><img src="../../.gitbook/assets/스크린샷 2024-03-05 오전 12.17.16.png" alt=""><figcaption></figcaption></figure>
+
+
+
+<figure><img src="../../.gitbook/assets/스크린샷 2024-03-05 오전 12.24.02.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/스크린샷 2024-03-05 오전 12.24.15.png" alt=""><figcaption></figcaption></figure>
+
+
+
+이 출력은 k6 부하 테스트 도구에서 실행한 테스트의 결과를 보여줍니다. 여기서 제공된 정보를 바탕으로 테스트 성과를 분석할 수 있습니다:
+
+* **Scenarios**: 테스트 시나리오에 관한 정보입니다. 여기서는 1개의 시나리오가 있으며, 최대 50명의 가상 사용자(VUs)를 사용하고, 최대 지속 시간은 1분입니다.
+* **Checks**: 테스트에서 정의한 검사의 성공 비율입니다. 여기서는 'is status 200' 체크가 100% 성공했습니다(1500회 중 1500회 성공).
+* **http\_req\_failed**: HTTP 요청이 실패한 비율입니다. 여기서는 0%로, 모든 요청이 성공적으로 완료되었습니다.
+* **http\_req\_duration**: HTTP 요청의 평균 응답 시간입니다. 평균 응답 시간은 19.44ms입니다.
+* **http\_reqs**: 테스트 동안 발생한 총 HTTP 요청 수입니다. 여기서는 1500요청이 있었습니다.
+* **Iterations**: 테스트 동안 완료된 반복(iteration)의 수입니다. 여기서는 1500번의 반복이 완료되었습니다.
+* **VUs**: 테스트 동안 사용된 가상 사용자의 수입니다. 이 경우, 최소 50명에서 최대 50명까지 사용되었습니다.
+
+
 
