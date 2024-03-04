@@ -1,6 +1,6 @@
 # 높은 부하를 받았을 때의 성능 테스트 결과 해석하기
 
-<figure><img src="../../.gitbook/assets/스크린샷 2024-03-01 오후 12.54.56.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/스크린샷 2024-03-01 오후 12.54.56.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -87,7 +87,7 @@ artillery run --output report.json high-load-test-config.yaml
 
 
 
-<figure><img src="../../.gitbook/assets/스크린샷 2024-03-01 오후 3.04.16.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/스크린샷 2024-03-01 오후 3.04.16.png" alt=""><figcaption></figcaption></figure>
 
 가설은 GC 가 많이 발생해서 생기는건가 ??? 가설을 세울수가 있다.
 

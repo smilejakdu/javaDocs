@@ -1,10 +1,10 @@
 # 성능 테스트 결과 해석하기
 
-<figure><img src="../../.gitbook/assets/스크린샷 2024-03-01 오전 11.53.08.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/스크린샷 2024-03-01 오전 11.53.08.png" alt=""><figcaption></figcaption></figure>
 
 요약 , 시나리오 카운트, codes , errors 가 나와있습니다.
 
-<figure><img src="../../.gitbook/assets/스크린샷 2024-03-01 오후 12.03.39.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/스크린샷 2024-03-01 오후 12.03.39.png" alt=""><figcaption></figcaption></figure>
 
 `artillery run --output report.json test-config.yaml`
 

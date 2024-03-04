@@ -57,7 +57,7 @@ Artillery로 HTTP 기반의 웹 애플리케이션에 대한 성능 테스트를
 
 이 설정 파일을 사용하여 Artillery를 실행하면, 지정된 URL(`http://localhost:8080/login-with-id-password`)로 로그인 시도를 시뮬레이션하면서 성능 테스트를 수행합니다. CSV 파일에서 제공된 각 사용자 ID와 비밀번호 쌍을 사용하여, 설정된 기간 동안 초당 3회의 로그인 요청을 시스템에 보냅니다. 이를 통해 로그인 시스템의 성능과 부하 처리 능력을 평가할 수 있습니다.
 
-<figure><img src="../../.gitbook/assets/스크린샷 2024-03-01 오후 12.34.25.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/스크린샷 2024-03-01 오후 12.34.25.png" alt=""><figcaption></figcaption></figure>
 
 말고도 headers 에 값을 넣어서 테스트도 가능하며 weight 도 부여할 수 있습니다.
 

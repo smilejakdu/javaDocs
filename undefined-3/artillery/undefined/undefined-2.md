@@ -2,7 +2,7 @@
 
 
 
-<figure><img src="../../.gitbook/assets/스크린샷 2024-03-01 오전 10.00.56.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/스크린샷 2024-03-01 오전 10.00.56.png" alt=""><figcaption></figcaption></figure>
 
 
 
