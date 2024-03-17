@@ -52,3 +52,5 @@
   * [마블 다이어그램으로 이해하는 Publisher](spring-reactive-web-applications/publisher.md)
   * [Cold Sequence 와 Hot Sequence](spring-reactive-web-applications/cold-sequence-hot-sequence.md)
 * [Domain & Entity](domain-and-entity.md)
+* [Spring Boot 어노테이션](spring-boot/README.md)
+  * [Autowired](spring-boot/autowired.md)
