@@ -55,3 +55,6 @@
 * [Spring Boot 어노테이션](spring-boot/README.md)
   * [Autowired](spring-boot/autowired.md)
   * [Slf4j](spring-boot/slf4j.md)
+* [Spring Boot Kafka](spring-boot-kafka/README.md)
+  * [토픽이란?](spring-boot-kafka/undefined.md)
+  * [replicate](spring-boot-kafka/replicate.md)
