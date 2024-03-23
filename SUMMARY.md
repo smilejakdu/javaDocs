@@ -59,5 +59,5 @@
   * [토픽이란?](spring-boot-kafka/undefined.md)
   * [replicate](spring-boot-kafka/replicate.md)
 * [카프카 환경 구성](undefined-4/README.md)
-  * [Page 2](undefined-4/page-2.md)
+  * [배치 전송 처리](undefined-4/undefined.md)
   * [Page 5](undefined-4/page-5.md)
