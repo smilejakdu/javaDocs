@@ -61,3 +61,6 @@
 * [카프카 환경 구성](undefined-4/README.md)
   * [배치 전송 처리](undefined-4/page-2.md)
   * [프로듀서의 동작 방식](undefined-4/undefined-1.md)
+* [Spring Boot DDD](spring-boot-ddd/README.md)
+  * [DDD 개념](spring-boot-ddd/ddd.md)
+  * [값 객체와 Aggregate](spring-boot-ddd/aggregate.md)
