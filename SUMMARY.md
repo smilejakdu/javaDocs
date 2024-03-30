@@ -65,3 +65,4 @@
 * [Spring Boot DDD](spring-boot-ddd/README.md)
   * [DDD 개념](spring-boot-ddd/ddd.md)
   * [값 객체와 Aggregate](spring-boot-ddd/aggregate.md)
+  * [Page 2](spring-boot-ddd/page-2.md)
