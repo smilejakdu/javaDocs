@@ -65,5 +65,7 @@
 * [Spring Boot DDD](spring-boot-ddd/README.md)
   * [DDD 개념](spring-boot-ddd/ddd.md)
   * [값 객체와 Aggregate](spring-boot-ddd/aggregate.md)
-* [Spring Redis](spring-redis.md)
+* [Spring Redis](spring-redis/README.md)
+  * [Page](spring-redis/page.md)
+  * [Page 2](spring-redis/page-2.md)
 * [Spring 트랜잭션](spring.md)
