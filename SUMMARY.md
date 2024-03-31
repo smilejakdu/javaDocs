@@ -66,6 +66,6 @@
   * [DDD 개념](spring-boot-ddd/ddd.md)
   * [값 객체와 Aggregate](spring-boot-ddd/aggregate.md)
 * [Spring Redis](spring-redis/README.md)
-  * [Page](spring-redis/page.md)
-  * [Page 2](spring-redis/page-2.md)
+  * [Find Redis](spring-redis/find-redis.md)
+  * [데이터 변경시 캐시 무효화](spring-redis/undefined.md)
 * [Spring 트랜잭션](spring.md)
