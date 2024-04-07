@@ -1,42 +1,52 @@
 # JPA EntityGraph
 
-`@EntityGraph`는 JPA(Java Persistence API)에서 사용하는 어노테이션으로, 엔터티를 조회할 때 어떤 연관된 엔터티나 속성을 함께 로딩할지 세밀하게 지정할 수 있게 해주는 기능입니다. 이를 통해 JPA의 기본 페치 전략(Fetch Strategy)을 오버라이드할 수 있으며, 특정 쿼리 실행 시 성능 최적화를 달성할 수 있습니다.
+`@EntityGraph`는 Java Persistence API(JPA)에서 엔터티의 로딩 전략을 쉽게 변경할 수 있도록 해주는 어노테이션입니다. 이를 사용하면 엔터티를 조회할 때 어떤 연관된 엔터티나 컬렉션을 EAGER 또는 LAZY 로딩 방식으로 함께 가져올지 세밀하게 제어할 수 있습니다. `@EntityGraph`는 주로 Repository 메서드 레벨에서 사용되며, 특정 조회 작업에 대해 표준 JPA의 로딩 전략을 오버라이드하고자 할 때 유용합니다.
 
-#### 기본 개념
+#### @EntityGraph의 주요 속성
 
-* **엔터티 그래프(Entity Graph)**: 엔터티와 그 연관된 엔터티들의 집합입니다. 엔터티 그래프를 사용하여, JPA가 데이터를 로드할 때 어떤 연관 엔터티들을 함께 로드할지 제어할 수 있습니다.
-* **페치 타입(Fetch Type)**: 엔터티의 연관된 엔터티를 로딩하는 방법을 결정합니다. `EAGER`는 연관된 엔터티를 즉시 로딩하고, `LAZY`는 연관된 엔터티를 실제로 접근할 때까지 로딩을 지연시킵니다.
+* **name**: `@NamedEntityGraph`에 정의된 엔터티 그래프의 이름을 지정합니다. 이 속성을 사용하면 엔터티 클래스에 미리 정의된 그래프를 참조할 수 있습니다.
+* **attributePaths**: 로딩할 연관 필드의 이름을 지정합니다. `name` 속성을 사용하지 않을 때 이 속성으로 직접 로딩할 필드를 정의할 수 있습니다.
+* **type**: `EntityGraphType.LOAD`와 `EntityGraphType.FETCH` 중 하나를 선택하여 로딩 방식을 지정합니다. `LOAD`는 지정된 속성을 EAGER 로딩으로 처리하고, 나머지는 엔터티 클래스에 정의된 기본 전략을 따릅니다. `FETCH`는 지정된 속성과 클래스에 정의된 EAGER 속성만 EAGER 로딩으로 처리하고, 나머지는 LAZY 로딩으로 처리합니다.
 
-#### @EntityGraph 사용법
+#### 사용 예시
 
-`@EntityGraph` 어노테이션은 주로 Repository 메서드에 적용됩니다. 이 어노테이션을 사용하여 메서드가 실행될 때 어떤 속성을 기반으로 엔터티 그래프를 적용할지 지정할 수 있습니다. 속성을 명시적으로 지정하거나, `NamedEntityGraph`를 참조할 수도 있습니다.
-
-* **attributePaths**: 함께 로드할 연관 엔터티의 속성 이름을 지정합니다.
-* **type**: 페치 타입을 지정합니다. `LOAD`는 지정한 속성들을 EAGER 로딩으로 처리하고, 나머지는 엔터티 클래스에 정의된 대로 처리합니다. `FETCH`는 `attributePaths`에 지정된 속성만 로드합니다.
-
-#### 예시
+**Repository에서 @EntityGraph 사용하기**
 
 ```java
-public interface UserRepository extends JpaRepository<User, Long> {
-    // 단순 사용 예
-    @EntityGraph(attributePaths = {"department"})
-    Optional<User> findById(Long id);
-
-    // NamedEntityGraph 사용 예
-    @EntityGraph(value = "User.detail", type = EntityGraph.EntityGraphType.FETCH)
-    List<User> findAllByLastName(String lastName);
+public interface BookRepository extends JpaRepository<Book, Long> {
+    @EntityGraph(attributePaths = {"author"})
+    List<Book> findAllBy();
 }
 ```
 
-#### 장점
+위 예시에서 `findAllBy` 메서드는 `Book` 엔터티를 조회할 때 연관된 `author` 필드를 EAGER 로딩으로 함께 가져옵니다. JPA의 기본 로딩 전략은 LAZY이지만, `@EntityGraph`를 사용하여 이를 오버라이드한 것입니다.
 
-* **성능 최적화**: 필요한 데이터만 선택적으로 로딩함으로써 성능을 개선할 수 있습니다.
-* **N+1 쿼리 문제 해결**: 적절한 엔터티 그래프를 사용하여 관련 데이터를 한 번의 쿼리로 로드함으로써, N+1 쿼리 문제를 방지할 수 있습니다.
-* **유연성**: 기본 페치 전략을 유지하면서, 특정 쿼리에 대해서만 로딩 전략을 변경할 수 있어 유연성이 뛰어납니다.
+**NamedEntityGraph와 함께 사용하기**
 
-#### 주의사항
+먼저 엔터티 클래스에 `@NamedEntityGraph`를 정의합니다:
 
-* **오버페칭(Overfetching)**: 필요하지 않은 데이터까지 로딩할 위험이 있어, 성능이 오히려 저하될 수 있습니다. 따라서 사용 시에는 신중한 고려가 필요합니다.
-* **복잡성**: 특정 쿼리에 맞춤형으로 로딩 전략을 설정하는 것은 애플리케이션의 복잡성을 증가시킬 수 있으므로, 관리가 필요합니다.
+```java
+@Entity
+@NamedEntityGraph(name = "Book.detail",
+                  attributeNodes = @NamedAttributeNode("author"))
+public class Book {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-`@EntityGraph`는 데이터 접근 패턴을 최
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Author author;
+    // 생략
+}
+```
+
+그리고 Repository에서 해당 그래프를 참조합니다:
+
+```java
+public interface BookRepository extends JpaRepository<Book, Long> {
+    @EntityGraph(value = "Book.detail", type = EntityGraph.EntityGraphType.LOAD)
+    Optional<Book> findById(Long id);
+}
+```
+
+이 예시에서 `findById` 메서드는 `Book.detail` 엔터티 그래프를 사용하여 `Book` 조회 시 `author`를 EAGER 로딩으로 함께 가져옵니다.
