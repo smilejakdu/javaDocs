@@ -69,3 +69,4 @@
   * [Find Redis](spring-redis/find-redis.md)
   * [데이터 변경시 캐시 무효화](spring-redis/undefined.md)
 * [Spring 트랜잭션](spring.md)
+* [Spring Boot JPA 모범 사례](spring-boot-jpa.md)
