@@ -71,4 +71,4 @@
 * [Spring 트랜잭션](spring.md)
 * [Spring Boot JPA 모범 사례](spring-boot-jpa/README.md)
   * [NamedEntityGraph 로 엔터티 그래프 정의](spring-boot-jpa/namedentitygraph.md)
-  * [Page 5](spring-boot-jpa/page-5.md)
+  * [JPA EntityGraph](spring-boot-jpa/jpa-entitygraph.md)
