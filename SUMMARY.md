@@ -7,6 +7,7 @@
   * [Page 3](undefined/page-3.md)
 * [JOOQ](jooq.md)
 * [Query DSL](query-dsl/README.md)
+  * [초기셋팅](query-dsl/undefined.md)
   * [FindTeacher](query-dsl/findteacher.md)
 * [Spring Boot WebFlux](spring-boot-webflux.md)
 * [모던 자바 인액션](undefined-1/README.md)
