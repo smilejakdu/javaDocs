@@ -16,7 +16,7 @@ JOOQ 를 공부하게 된 계기는
 
 {% embed url="https://mvnrepository.com/artifact/com.querydsl/querydsl-jpa" %}
 
-<figure><img src=".gitbook/assets/스크린샷 2024-01-16 오후 8.25.34.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/스크린샷 2024-01-16 오후 8.25.34.png" alt=""><figcaption></figcaption></figure>
 
 이후 업데이트 되지 않습니다.
 
