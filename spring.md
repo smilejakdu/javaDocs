@@ -27,3 +27,7 @@
 #### 결론:
 
 `@Transactional(readOnly = true)`는 데이터를 변경하지 않는 조회 전용 메서드에서 사용하는 것이 좋습니다. 이는 의도치 않은 데이터 변경을 방지하고, 성능을 최적화하는 데 도움이 됩니다. 데이터를 변경하는 연산에는 `@Transactional`을 사용하되 `readOnly` 속성을 false로 설정하거나 명시하지 않습니다.
+
+
+
+## 전이와 @Transactional
