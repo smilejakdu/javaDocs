@@ -4,10 +4,6 @@
 
 ## Transactional
 
-
-
-
-
 ## Transactional(readOnly = true)
 
 
@@ -31,3 +27,8 @@
 
 
 ## 전이와 @Transactional
+
+
+
+{% embed url="https://kghworks.tistory.com/106" %}
+
